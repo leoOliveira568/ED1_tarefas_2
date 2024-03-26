@@ -1,0 +1,26 @@
+public class Main {
+    public static void main(String[] args) {
+        char[] vetor = {'a', 'b', 'c', 'a', 'd', 'e', 'a'};
+        int tamanho = vetor.length;
+        char caractere = 'a';
+        int totalRetirados = substituirCaractere(vetor, tamanho, caractere);
+
+        System.out.print("Vetor modificado: ");
+        for (char c : vetor) {
+            System.out.print(c + " ");
+        }
+        System.out.println();
+        System.out.println("Total de caracteres retirados: " + totalRetirados);
+    }
+
+    public static int substituirCaractere(char[] vetor, int tamanho, char caractere) {
+        int totalRetirados = 0;
+        for (int i = 0; i < tamanho; i++) {
+            if (vetor[i] == caractere) {
+                vetor[i] = '*';
+                totalRetirados++;
+            }
+        }
+        return totalRetirados;
+    }
+}
