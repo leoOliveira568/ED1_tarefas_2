@@ -1,0 +1,22 @@
+public class Main {
+    public static void main(String[] args) {
+        int numero = 17; 
+        if (isPrimo(numero)) {
+            System.out.println(numero + " é primo.");
+        } else {
+            System.out.println(numero + " não é primo.");
+        }
+    }
+
+    public static boolean isPrimo(int numero) {
+        if (numero <= 1) {
+            return false;
+        }
+        for (int i = 2; i < numero; i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
