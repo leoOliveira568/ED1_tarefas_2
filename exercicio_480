@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        int numero = 2002; 
+        if (isCapicua(numero)) {
+            System.out.println(numero + " é capicua.");
+        } else {
+            System.out.println(numero + " não é capicua.");
+        }
+    }
+
+    public static boolean isCapicua(int numero) {
+        String numeroStr = Integer.toString(numero);
+        StringBuilder reverso = new StringBuilder();
+        for (int i = numeroStr.length() - 1; i >= 0; i--) {
+            reverso.append(numeroStr.charAt(i));
+        }
+        return numeroStr.equals(reverso.toString());
+    }
+} 
